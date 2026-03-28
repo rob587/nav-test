@@ -1,17 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { router } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text>Eciao.</Text>
+    <View style={styles.contenitore}>
+      <Text style={styles.titolo}>Profilo</Text>
+      <Pressable style={styles.btn} onPress={() => router.back()}>
+        <Text style={styles.btnTesto}>Torna indietro</Text>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  contenitore: { flex: 1, justifyContent: "center", alignItems: "center" },
+  titolo: { fontSize: 32, marginBottom: 24 },
+  btn: { backgroundColor: "#4f46e5", padding: 16, borderRadius: 8 },
+  btnTesto: { color: "white", fontSize: 16 },
 });
