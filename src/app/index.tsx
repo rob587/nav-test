@@ -4,8 +4,8 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <View style={styles.contenitore}>
-      <Text style={styles.titolo}>Profilo</Text>
-      <Pressable style={styles.btn} onPress={() => router.back()}>
+      <Text style={styles.titolo}>Index</Text>
+      <Pressable style={styles.btn} onPress={() => router.push("/profilo")}>
         <Text style={styles.btnTesto}>Torna indietro</Text>
       </Pressable>
     </View>
